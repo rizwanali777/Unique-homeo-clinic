@@ -1,4 +1,5 @@
 import { lazy, memo, Suspense, useCallback, useState, type ComponentType } from 'react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import { PageView, ConsultationType } from './types';
 import { Navbar as NavbarView } from './components/Navbar';
 import { HeroSection as HeroSectionView } from './components/HeroSection';
@@ -175,6 +176,8 @@ export default function App() {
       <QuickWhatsAppFab />
 
       <Footer setActiveView={setActiveView} onOpenBooking={openOnlineBooking} />
+      
+      <SpeedInsights />
     </div>
   );
 }
